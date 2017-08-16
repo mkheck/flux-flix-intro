@@ -1,4 +1,4 @@
-= FluxFlix introductory project
+= Intro to FluxFlix
 
 == Maintainer
 
