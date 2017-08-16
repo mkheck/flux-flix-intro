@@ -1,0 +1,37 @@
+= FluxFlix introductory project
+
+== Maintainer
+
+* Mark Heckler
+* mailto:mark@thehecklers.org[mark@thehecklers.org]
+* https://twitter.com/MkHeck[@mkheck on Twitter]
+
+== Purpose
+
+This project is intended to provide a streamlined introduction to reactive streams, in particular Project Reactor. While Project Reactor is not dependent upon the Spring Framework or Spring Boot, Spring Framework v5 and Spring Boot 2 are dependent upon Project Reactor. This demonstration app leverages all of the above in a somewhat (hopefully) typical application.
+
+== Prerequisites
+
+* MongoDB instance running & accessible using defaults
+
+== Helpful hints
+
+* The flux-flix-service application, as it is currently configured, uses Spring WebMVC-style imperative/annotated code to create the defined REST endpoints.
+* To try defining the endpoints & routes in a functional reactive manner, simply:
+** Comment out the @RestController annotation in the _MovieController_ class
+** Uncomment the @Configuration annotation in the _FunctionalReactiveConfig_ class
+** Re-run the application
+* The _FunctionalReactiveConfig_ class uses static imports to simplify the code (developer's choice)
+* Lombok further reduces boilerplate for domain classes _Movie_ and _MovieEvent_
+* Two different options are in the _DataLoader_ class for examining either
+** movies as they are stored to the database
+** a listing of all movies in the database
+
+Feel free to clone the repo and play around with things. When you're ready to add in security (reactive, of course) and/or dial up the complexity a bit, please check out Josh Long's & my shared repo (linked below).
+
+Feedback welcome.
+
+== Other useful links
+
+* https://github.com/joshlong/flux-flix-service[Josh Long's & my demo project (including contributions by friends & colleagues]
+* http://projectreactor.io/[Project Reactor]
