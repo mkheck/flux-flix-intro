@@ -10,5 +10,6 @@
     <modules>
         <module>flux-flix-client</module>
         <module>flux-flix-service</module>
+        <module>flux-flix-service-kotlin</module>
     </modules>
 </project>
