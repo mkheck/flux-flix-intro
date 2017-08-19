@@ -16,6 +16,8 @@ This project is intended to provide a streamlined introduction to reactive strea
 
 == Helpful hints
 
+=== Java-based service
+
 * The flux-flix-service application, as it is currently configured, uses Spring WebMVC-style imperative/annotated code to create the defined REST endpoints.
 * To try defining the endpoints & routes in a functional reactive manner, simply:
 ** Comment out the @RestController annotation in the _MovieController_ class
@@ -26,6 +28,18 @@ This project is intended to provide a streamlined introduction to reactive strea
 * Two different options are in the _DataLoader_ class for examining either
 ** movies as they are stored to the database
 ** a listing of all movies in the database
+
+=== Kotlin-based service
+
+Options for endpoint/route configuration are similar to the Java-based flux-flix-service notes above, to wit:
+
+* To try defining the endpoints & routes in a functional reactive manner, simply:
+** Comment out the @RestController annotation in the _MovieController_ class
+** Uncomment the @Configuration annotation in the _FunctionalReactiveConfig_ class
+** Re-run the application
+* With Kotlin, Lombok is no longer needed to reduce/eliminate boilerplate in domain classes
+
+== Additional notes
 
 Feel free to clone the repo and play around with things. When you're ready to add in security (reactive, of course) and/or dial up the complexity a bit, please check out Josh Long's & my shared repo (linked below).
 
