@@ -45,7 +45,7 @@ Feel free to clone the repo and play around with things. When you're ready to ad
 
 Feedback welcome.
 
-== Other useful links
+== Next steps & useful links
 
 * https://github.com/joshlong/flux-flix-service[Josh Long's & my demo project (including contributions by friends & colleagues)]
 * http://projectreactor.io/[Project Reactor]
