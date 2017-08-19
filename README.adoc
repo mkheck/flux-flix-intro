@@ -47,5 +47,5 @@ Feedback welcome.
 
 == Other useful links
 
-* https://github.com/joshlong/flux-flix-service[Josh Long's & my demo project (including contributions by friends & colleagues]
+* https://github.com/joshlong/flux-flix-service[Josh Long's & my demo project (including contributions by friends & colleagues)]
 * http://projectreactor.io/[Project Reactor]
