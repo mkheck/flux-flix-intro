@@ -7,7 +7,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.body
 
 @Component
-class MovieHandler(val movieService: MovieService) {
+class MovieHandler(private val movieService: MovieService) {
 
     fun getMovies(request: ServerRequest) = ServerResponse
             .ok()

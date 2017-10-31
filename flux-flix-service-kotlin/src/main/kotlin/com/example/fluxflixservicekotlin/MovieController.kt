@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono
 
 //@RestController
 @RequestMapping("/movies")
-class MovieController(val movieService: MovieService) {
+class MovieController(private val movieService: MovieService) {
 
     @GetMapping
     fun getMovies(): Flux<Movie> = movieService.getAllMovies()

@@ -6,18 +6,18 @@ import org.springframework.http.MediaType
 import org.springframework.web.reactive.function.server.*
 
 @Configuration
-class FunctionalReactiveConfig(val movieHandler: MovieHandler) {
+class FunctionalReactiveConfig(private val movieHandler: MovieHandler) {
     @Bean
     fun router() = router {
-        "/".nest {
+        "/movies".nest {
             accept(MediaType.APPLICATION_JSON).nest {
-                GET("/movies", { request -> movieHandler.getMovies(request) })
+                GET("/", { request -> movieHandler.getMovies(request) })
             }
             accept(MediaType.APPLICATION_JSON).nest {
-                GET("/movies/{id}", { request -> movieHandler.getMovie(request) })
+                GET("/{id}", { request -> movieHandler.getMovie(request) })
             }
             accept(MediaType.TEXT_EVENT_STREAM).nest {
-                GET("/movies/{id}/events", { request -> movieHandler.getEvents(request) })
+                GET("/{id}/events", { request -> movieHandler.getEvents(request) })
             }
         }
     }

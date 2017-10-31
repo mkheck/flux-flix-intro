@@ -8,7 +8,7 @@ import java.time.Duration
 import java.util.*
 
 @Service
-class MovieService(val movieRepository: MovieRepository) {
+class MovieService(private val movieRepository: MovieRepository) {
 
     fun getAllMovies(): Flux<Movie> = movieRepository.findAll()
 
