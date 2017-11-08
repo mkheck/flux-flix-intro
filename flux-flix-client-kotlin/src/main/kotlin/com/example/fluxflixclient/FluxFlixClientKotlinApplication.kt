@@ -3,6 +3,7 @@ package com.example.fluxflixclient
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
 import org.springframework.web.reactive.function.client.WebClient
 import org.springframework.web.reactive.function.client.bodyToFlux
@@ -28,9 +29,9 @@ class FluxFlixClientKotlinApplication {
 }
 
 fun main(args: Array<String>) {
-    SpringApplication.run(FluxFlixClientKotlinApplication::class.java, *args)
+    runApplication<FluxFlixClientKotlinApplication>(*args)
 }
 
 data class MovieEvent(val movieId: String, val viewDate: Date)
 
-data class Movie(val id: String, val title: String)
+class Movie(val id: String, val title: String)

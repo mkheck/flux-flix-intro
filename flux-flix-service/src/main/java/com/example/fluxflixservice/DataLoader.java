@@ -20,15 +20,12 @@ public class DataLoader {
                         "Y Tu Mono También",
                         "Meet the Fluxers")
                         .map(Movie::new)
-                        // Replace following line with next 2 to subscribe
-                        // & report movies _as they are saved_
-                        .flatMap(this.movieRepository::save));
-//                        .flatMap(this.movieRepository::save))
-//                .subscribe(System.out::println);
+                        .flatMap(this.movieRepository::save))
+                .subscribe(System.out::println);
 
-        System.out.println("\nAll records in DB:\n");
-        this.movieRepository
-                .findAll()
-                .subscribe(movie -> System.out.println("> Found in DB: " + movie.toString()));
+//        System.out.println("\nAll records in DB:\n");
+//        this.movieRepository
+//                .findAll()
+//                .subscribe(movie -> System.out.println("> Found in DB: " + movie.toString()));
     }
 }

@@ -12,8 +12,6 @@ class FunctionalReactiveConfig(private val movieHandler: MovieHandler) {
         "/movies".nest {
             accept(MediaType.APPLICATION_JSON).nest {
                 GET("/", { request -> movieHandler.getMovies(request) })
-            }
-            accept(MediaType.APPLICATION_JSON).nest {
                 GET("/{id}", { request -> movieHandler.getMovie(request) })
             }
             accept(MediaType.TEXT_EVENT_STREAM).nest {

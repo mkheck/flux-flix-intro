@@ -1,11 +1,11 @@
 package com.example.fluxflixservicekotlin
 
-import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 
 @SpringBootApplication
 class FluxFlixServiceKotlinApplication
 
 fun main(args: Array<String>) {
-    SpringApplication.run(FluxFlixServiceKotlinApplication::class.java, *args)
+    runApplication<FluxFlixServiceKotlinApplication>(*args)
 }
